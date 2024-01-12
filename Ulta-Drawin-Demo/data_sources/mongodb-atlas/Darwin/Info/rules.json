@@ -37,8 +37,16 @@
             "insert": false,
             "delete": false,
             "search": true,
-            "read": true,
-            "write": false
+            "fields": {
+                "first_name": {
+                    "read": true,
+                    "write": false
+                },
+                "last_name": {
+                    "read": true,
+                    "write": false
+                }
+            }
         }
     ]
 }
