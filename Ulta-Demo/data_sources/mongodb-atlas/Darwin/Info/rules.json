@@ -1,31 +1,6 @@
 {
     "database": "Darwin",
     "collection": "Info",
-    "filters": [
-        {
-            "name": "lessdata",
-            "query": {
-                "owner_id": "%%user.id"
-            },
-            "projection": {
-                "first_name": {
-                    "$numberInt": "1"
-                },
-                "last_name": {
-                    "$numberInt": "1"
-                },
-                "job": {
-                    "$numberInt": "1"
-                },
-                "age": {
-                    "$numberInt": "1"
-                }
-            },
-            "apply_when": {
-                "%%true": true
-            }
-        }
-    ],
     "roles": [
         {
             "name": "readAll",
@@ -37,16 +12,8 @@
             "insert": false,
             "delete": false,
             "search": true,
-            "fields": {
-                "first_name": {
-                    "read": true,
-                    "write": false
-                },
-                "last_name": {
-                    "read": true,
-                    "write": false
-                }
-            }
+            "read": true,
+            "write": false
         }
     ]
 }
