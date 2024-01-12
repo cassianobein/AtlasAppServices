@@ -1,6 +1,29 @@
 {
     "database": "Darwin",
     "collection": "Info",
+    "filters": [
+        {
+            "name": "lessdata",
+            "query": {},
+            "projection": {
+                "fisrt_name": {
+                    "$numberInt": "1"
+                },
+                "last_name": {
+                    "$numberInt": "1"
+                },
+                "job": {
+                    "$numberInt": "1"
+                },
+                "age": {
+                    "$numberInt": "1"
+                }
+            },
+            "apply_when": {
+                "%%true": true
+            }
+        }
+    ],
     "roles": [
         {
             "name": "readOwnWriteOwn",
