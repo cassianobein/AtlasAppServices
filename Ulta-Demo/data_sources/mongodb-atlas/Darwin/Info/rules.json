@@ -4,7 +4,9 @@
     "filters": [
         {
             "name": "lessdata",
-            "query": {},
+            "query": {
+                "owner_id": "%%user.id"
+            },
             "projection": {
                 "fisrt_name": {
                     "$numberInt": "1"
