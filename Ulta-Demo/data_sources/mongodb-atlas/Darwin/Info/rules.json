@@ -16,8 +16,20 @@
             "insert": true,
             "delete": true,
             "search": true,
-            "read": true,
-            "write": true
+            "fields": {
+                "first_name": {
+                    "read": true,
+                    "write": false
+                },
+                "job": {
+                    "read": true,
+                    "write": false
+                },
+                "last_name": {
+                    "read": true,
+                    "write": false
+                }
+            }
         }
     ]
 }
