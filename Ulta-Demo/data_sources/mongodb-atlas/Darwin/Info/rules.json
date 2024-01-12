@@ -8,7 +8,7 @@
                 "owner_id": "%%user.id"
             },
             "projection": {
-                "fisrt_name": {
+                "first_name": {
                     "$numberInt": "1"
                 },
                 "last_name": {
