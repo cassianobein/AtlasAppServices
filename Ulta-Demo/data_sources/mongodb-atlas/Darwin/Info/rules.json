@@ -3,17 +3,21 @@
     "collection": "Info",
     "roles": [
         {
-            "name": "readAll",
+            "name": "readOwnWriteOwn",
             "apply_when": {},
             "document_filters": {
-                "read": true,
-                "write": false
+                "read": {
+                    "owner_id": "%%user.id"
+                },
+                "write": {
+                    "owner_id": "%%user.id"
+                }
             },
-            "insert": false,
-            "delete": false,
+            "insert": true,
+            "delete": true,
             "search": true,
             "read": true,
-            "write": false
+            "write": true
         }
     ]
 }
