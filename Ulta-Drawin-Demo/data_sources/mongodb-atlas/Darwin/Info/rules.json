@@ -1,6 +1,31 @@
 {
     "database": "Darwin",
     "collection": "Info",
+    "filters": [
+        {
+            "name": "lessDatabyUser",
+            "query": {
+                "owner_id": "%%user.id"
+            },
+            "projection": {
+                "first_name": {
+                    "$numberInt": "1"
+                },
+                "last_name": {
+                    "$numberInt": "1"
+                },
+                "email": {
+                    "$numberInt": "1"
+                },
+                "job": {
+                    "$numberInt": "1"
+                }
+            },
+            "apply_when": {
+                "%%true": true
+            }
+        }
+    ],
     "roles": [
         {
             "name": "readAll",
